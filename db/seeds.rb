@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Calendar.create(title: 'Test Event', description: 'Testing that I can create events correctly', start_date: DateTime.now, end_date: DateTime.now + 6.hours, url: nil);
