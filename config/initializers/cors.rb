@@ -10,6 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
      origins 'localhost:4200', 'arborlanding-hoa.herokuapp.com'
      resource '*',
        headers: :any,
-       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+       methods: [:get, :post, :put, :patch, :delete, :options, :head],
+       expose: ['ETag', 'Authorization']
    end
  end

@@ -1,5 +1,7 @@
 class CalendarsController < ApplicationController
   before_action :set_calendar, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:subscribe, :index]
+
 
   # GET /calendars
   def index
@@ -62,6 +64,6 @@ class CalendarsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def calendar_params
-      params.fetch(:calendar, {})
+      params.fetch(:calendar, {}).permit(:title, :description, :location,:startDate,   :endDate)
     end
 end
