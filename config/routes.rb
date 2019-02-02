@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  mount HealthMonitor::Engine, at: '/health'
+
   devise_for :users,
              path: '',
              path_names: {

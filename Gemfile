@@ -11,6 +11,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'icalendar', '~> 2.5'
 gem 'devise-jwt'
+gem 'health-monitor-rails'
 
 gem 'dotenv-rails', groups: [:development, :test]
 

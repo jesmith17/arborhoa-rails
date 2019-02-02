@@ -74,6 +74,8 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    health-monitor-rails (8.1.0)
+      rails (>= 4.0)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     icalendar (2.5.1)
@@ -174,6 +176,7 @@ DEPENDENCIES
   byebug
   devise-jwt
   dotenv-rails
+  health-monitor-rails
   icalendar (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
