@@ -6,6 +6,7 @@ class SessionsController < Devise::SessionsController
   private
 
   def respond_with(resource, _opts = {})
+    p resource
     render json: resource
   end
 

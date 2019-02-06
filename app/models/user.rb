@@ -8,4 +8,15 @@ class User < ApplicationRecord
   devise :database_authenticatable,
          :jwt_authenticatable,
          jwt_revocation_strategy: JwtBlacklist
+
+
+  def jwt_payload
+    { first_name: first_name,
+      last_name: last_name,
+      email: email,
+      id: id,
+      position: position
+    }
+  end
+
 end

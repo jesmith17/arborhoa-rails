@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   mount HealthMonitor::Engine, at: '/health'
 
   devise_for :users,
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
                  sessions: 'sessions',
                  registrations: 'registrations'
              }
-
+  resources :users, only: [:show, :index, :update]
   resources :calendars do
     collection do
       get  '/subscribe', to: 'calendars#subscribe'
