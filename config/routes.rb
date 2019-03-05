@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
 
 
+  post 'mailchimp/subscribe'
+  resources :news
+  resources :arch_request_approvals
+  resources :arch_requests do
+    collection do
+      get '/confirm', to: 'arch_requests#confirm'
+    end
+  end
   mount HealthMonitor::Engine, at: '/health'
 
   devise_for :users,
